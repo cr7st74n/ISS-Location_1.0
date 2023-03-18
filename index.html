@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Leadfet maps  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <!-- chart CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+
     <link rel="stylesheet" href="./css/style.css">
+    <script async defer src="./app/app.js"></script>
 </head>
+
 <body>
     <h1 class="main-header">International Space Station</h1>
 
@@ -18,7 +31,8 @@
         <p>ISS Longitude:  <span id="ISS-long"></span> </p>
     </div>
 
+    <div  id="Map-ISS"></div>
 
-    <script src="./app/app.js"></script>
+
 </body>
 </html>
