@@ -8,24 +8,17 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1 class="main-header">Here is some html</h1>
+    <h1 class="main-header">International Space Station</h1>
 
-    <div class="wrapper">
+    <p>This page updates every 10 seconds.</p>
 
-        <h2>hola aqui segundo elemeto</h2>
-
-        <p>y un parrafo</p>
+    <div id="info-ISS">
+        <p id = "real-time"></p>
+        <p>ISS Latitude:  <span id="ISS-lat"></span> </p>
+        <p>ISS Longitude:  <span id="ISS-long"></span> </p>
     </div>
 
-    <form class="column">
-        <input id="text" type="text" placeholder="escribe algo aqui perro">
-        <button id="btn">submit</button>
-    </form>
 
-    <a id="link" href="https://www.google.com/">my link</a>
-
-    <!-- <button id="start">start</button> -->
-    
-    <script src="./app/app-3.js"></script>
+    <script src="./app/app.js"></script>
 </body>
 </html>
