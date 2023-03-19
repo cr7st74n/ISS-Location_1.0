@@ -1,6 +1,6 @@
-#Map-ISScd{
+#Map-ISS{
   width: 700px;
   height: 600px;
-  border: 1px #517354;
+  border: 1px black solid;
   border-radius: 10px;
 }
