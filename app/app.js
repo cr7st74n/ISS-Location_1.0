@@ -8,11 +8,12 @@ setInterval(()=>{
 }, 1000)
 
 //get tge ISS data every 10 sec
-const update =10000
-let ISSmarker
+const update =10000;
+let ISSmarker ;
+const maxFailatt = 3;
 
-get_ISSData()
-setInterval(get_ISSData,update);
+get_ISSData(maxFailatt)
+// setInterval(get_ISSData,update); //10 sec
 
 //get all the elememt to display the information 
 const isslat = document.querySelector("#ISS-lat");
@@ -35,7 +36,7 @@ const ISSIcon =  L.icon({
 
 // Fetch the information to added to our p elements.
 
-function get_ISSData(){
+function get_ISSData(attemps){
 
 fetch(url).then((res)=>{
     return res.json()
@@ -53,6 +54,10 @@ fetch(url).then((res)=>{
 
  }).catch((err)=>{
     console.log('ERROR in the fetch', err);
+    attemps--;
+ })
+ .finally(()=>{
+    setTimeout(get_ISSData,update,attemps);
  })
 
 
